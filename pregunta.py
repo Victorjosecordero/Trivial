@@ -1,3 +1,5 @@
+import respuesta
+
 class Pregunta():
     def __init__(self,id,cuerpo,dificultad=0,tematica='general') -> None:
         self.__id= id

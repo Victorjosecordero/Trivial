@@ -1,0 +1,36 @@
+{%extends 'base_estilos.html'%}
+
+{%block title%}Home{%endblock%}
+
+{%block content%}
+<h1 id="hh1">Bienvenido a mi Base de Datos</h1>
+<div class="cuerpo" >
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>DNI</th>
+        <th>Ocupación</th>
+        <th>Número</th>
+        <th colspan="2">Acciones</th>
+    </tr>
+    {% for fila in datos%}
+    <tr>
+        <td>{{fila[0]}}</td>
+        <td>{{fila[1]}}</td>
+        <td>{{fila[2]}}</td>
+        <td>{{fila[3]}}</td>
+        <td>{{fila[4]}}</td>
+        <td>{{fila[5]}}</td>
+        <td><a class="button is-warning " href="/editar/{{fila[0]}}">Editar</a></td>
+        <td><a class="button is-danger " href="/borrar/{{fila[0]}}">Borrar</a></td>
+    </tr>
+    {%endfor%}
+</table>
+</div>
+
+
+{%endblock%}
+
